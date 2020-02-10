@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class POSController extends Controller
@@ -34,6 +36,7 @@ class POSController extends Controller
      */
     public function cashier(Request $request)
     {
-      return view('pos.cashier');
+      $products = Product::all();
+      return view('pos.cashier', compact('products'));
     }
 }

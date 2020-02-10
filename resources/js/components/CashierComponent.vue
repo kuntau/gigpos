@@ -5,7 +5,17 @@
         <div class="card-header">Cash Register</div>
 
         <div class="card-body">
-          I'm an example {{ name }}.
+          <p>
+            I'm an example {{ tests.count }}.
+          </p>
+          <p>
+            I'm an example {{ name }}.
+          </p>
+          <ul class="list">
+            <li v-for="(t, i) in tests">
+              {{ t.name }} - {{ i }}
+            </li>
+          </ul>
         </div>
         <button class="btn btn-primary btn-large" @click="onClick(yes)">NO</button>
       </div>
@@ -43,11 +53,17 @@
           </table>
         </div>
         <div class="card-footer">
-          <H3>YES</H3>
           <table class="table-borderless">
             <tr>
-              <td style="width:80%">Discount</td>
-              <td class="text-right" style="width:20%">10%</td>
+              <td class="w-75">Discount</td>
+              <td class="text-right w-25">
+                <div class="input-group input-group-sm">
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" :placeholder="discount">
+                  <div class="input-group-append">
+                    <span class="input-group-text">%</span>
+                  </div>
+                </div>
+              </td>
             </tr>
             <tr>
               <td>Coupon</td>
@@ -58,8 +74,8 @@
               <td class="text-right">$799.80</td>
             </tr>
             <tr>
-              <td>SST</td>
-              <td class="text-right">6%</td>
+              <td>SST <a href="#">6%</a></td>
+              <td class="text-right">$43.00</td>
             </tr>
           </table>
         </div>
@@ -79,9 +95,12 @@
     },
     data() {
       return {
-        name: 'yes'
+        name: 'yes',
+        discount: 10,
+        tax: 6
       }
     },
+    props: ['tests'],
     methods: {
       onClick: (click) => {
         console.log(click)

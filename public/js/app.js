@@ -2006,15 +2006,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Cashierr mounted!');
   },
   data: function data() {
     return {
-      name: 'yes'
+      name: 'yes',
+      discount: 10,
+      tax: 6
     };
   },
+  props: ['tests'],
   methods: {
     onClick: function onClick(click) {
       console.log(click);
@@ -38045,7 +38064,36 @@ var render = function() {
         _c("div", { staticClass: "card-header" }, [_vm._v("Cash Register")]),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [
-          _vm._v("\n        I'm an example " + _vm._s(_vm.name) + ".\n      ")
+          _c("p", [
+            _vm._v(
+              "\n          I'm an example " +
+                _vm._s(_vm.tests.count) +
+                ".\n        "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n          I'm an example " + _vm._s(_vm.name) + ".\n        "
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            { staticClass: "list" },
+            _vm._l(_vm.tests, function(t, i) {
+              return _c("li", [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(t.name) +
+                    " - " +
+                    _vm._s(i) +
+                    "\n          "
+                )
+              ])
+            }),
+            0
+          )
         ]),
         _vm._v(" "),
         _c(
@@ -38069,14 +38117,36 @@ var render = function() {
         _vm._v(" "),
         _vm._m(0),
         _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "card-footer" },
-          [_c("H3", [_vm._v("YES")]), _vm._v(" "), _vm._m(1)],
-          1
-        ),
+        _c("div", { staticClass: "card-footer" }, [
+          _c("table", { staticClass: "table-borderless" }, [
+            _c("tr", [
+              _c("td", { staticClass: "w-75" }, [_vm._v("Discount")]),
+              _vm._v(" "),
+              _c("td", { staticClass: "text-right w-25" }, [
+                _c("div", { staticClass: "input-group input-group-sm" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      "aria-label": "Amount (to the nearest dollar)",
+                      placeholder: _vm.discount
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm._m(1)
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _vm._m(3),
+            _vm._v(" "),
+            _vm._m(4)
+          ])
+        ]),
         _vm._v(" "),
-        _vm._m(2)
+        _vm._m(5)
       ]),
       _vm._v(" "),
       _c(
@@ -38147,32 +38217,41 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("table", { staticClass: "table-borderless" }, [
-      _c("tr", [
-        _c("td", { staticStyle: { width: "80%" } }, [_vm._v("Discount")]),
-        _vm._v(" "),
-        _c("td", { staticClass: "text-right", staticStyle: { width: "20%" } }, [
-          _vm._v("10%")
-        ])
+    return _c("div", { staticClass: "input-group-append" }, [
+      _c("span", { staticClass: "input-group-text" }, [_vm._v("%")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", [_vm._v("Coupon")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "text-right" }, [_vm._v("-")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", [_vm._v("Sub Total")]),
+      _vm._v(" "),
+      _c("td", { staticClass: "text-right" }, [_vm._v("$799.80")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", [
+        _vm._v("SST "),
+        _c("a", { attrs: { href: "#" } }, [_vm._v("6%")])
       ]),
       _vm._v(" "),
-      _c("tr", [
-        _c("td", [_vm._v("Coupon")]),
-        _vm._v(" "),
-        _c("td", { staticClass: "text-right" }, [_vm._v("-")])
-      ]),
-      _vm._v(" "),
-      _c("tr", [
-        _c("td", [_vm._v("Sub Total")]),
-        _vm._v(" "),
-        _c("td", { staticClass: "text-right" }, [_vm._v("$799.80")])
-      ]),
-      _vm._v(" "),
-      _c("tr", [
-        _c("td", [_vm._v("SST")]),
-        _vm._v(" "),
-        _c("td", { staticClass: "text-right" }, [_vm._v("6%")])
-      ])
+      _c("td", { staticClass: "text-right" }, [_vm._v("$43.00")])
     ])
   },
   function() {
