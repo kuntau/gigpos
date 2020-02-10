@@ -12,14 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('pos');
+    return view('welcome');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/product', 'ProductController@index')->name('product');
-Route::get('/user', 'UserController@index')->name('user');
+Route::get('/product', 'ProductController@index')->name('products.index');
+Route::get('/user', 'UserController@index')->name('users.index');
 
-
-Route::get('/pos', 'POSController@index')->name('pos');
+// Route::get('/dashboard', 'POSController@index')->name('pos.index');
+Route::get('/pos', 'POSController@index')->name('pos.index');
+Route::get('/pos/cashier', 'POSController@cashier')->name('pos.cashier');

@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
-use Illuminate\Support\Facades\DB;
+use App\User;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        // dd($product->first()->name);
-        $products = Product::oldest()->paginate(10);
-        // $products = DB::table('products')->simplePaginate(10);
-        // $products = DB::table('products')->simplePaginate(10);
-        return view('products.index', compact('products'));
+        $users = User::simplePaginate(2);
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -46,10 +42,10 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(User $user)
     {
         //
     }
@@ -57,10 +53,10 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(User $user)
     {
         //
     }
@@ -69,10 +65,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -80,10 +76,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(User $user)
     {
         //
     }

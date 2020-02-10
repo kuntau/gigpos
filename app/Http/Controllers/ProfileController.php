@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
-use Illuminate\Support\Facades\DB;
+use App\Profile;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        // dd($product->first()->name);
-        $products = Product::oldest()->paginate(10);
-        // $products = DB::table('products')->simplePaginate(10);
-        // $products = DB::table('products')->simplePaginate(10);
-        return view('products.index', compact('products'));
+        //
     }
 
     /**
@@ -46,10 +41,10 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(Profile $profile)
     {
         //
     }
@@ -57,10 +52,10 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Profile $profile)
     {
         //
     }
@@ -69,10 +64,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param  \App\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, Profile $profile)
     {
         //
     }
@@ -80,10 +75,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Profile $profile)
     {
         //
     }
