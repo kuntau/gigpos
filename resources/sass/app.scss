@@ -1,9 +1,16 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url('https://pro.fontawesome.com/releases/v5.12.1/css/all.css');
+// @import url('https://pro.fontawesome.com/releases/v5.12.1/css/all.css');
+@import url('https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.css');
 
 // Variables
 @import 'variables';
 
+// Bulma
+// @import '~bulma/sass/utilities/_all.sass';
+// @import '~bulma/css/bulma.css';
+// @import '~bulma/sass/bulma.sass';
+@import '~buefy/dist/buefy.css';
+
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
