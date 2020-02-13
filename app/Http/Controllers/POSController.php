@@ -36,7 +36,12 @@ class POSController extends Controller
      */
     public function cashier(Request $request)
     {
-      $products = Product::all();
+      // $products = Product::all();
+      $products = Product::where('price','<','10')->get();
+      // $first = Product::all();
+      // $first = $first->toArray();
+      // dd($first);
+      // return view('pos.cashier', ['first' => 'YAAAAAAAAAAAAA json_decode($first)']);
       return view('pos.cashier', compact('products'));
     }
 }

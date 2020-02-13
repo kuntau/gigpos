@@ -10,18 +10,19 @@
 
         <div class="card-content">
           <p class="is-uppercase">
-            I'm an example {{ tests.count }}.
+            I'm an example @{{ products.length }} + {{ typeof(products) }}
           </p>
-          <p>
-            I'm an example {{ name }}.
+          <p v-if="false">
+            I'm an example {{ products }}.
           </p>
-          <ul class="listx">
-            <li v-for="(t, i) in tests">
-              {{ t.name }} - {{ i }}
+          <ul class="list">
+            <!-- <li v-for="(t, i) in tests"> -->
+            <li v-for="product of products" v-bind:key="product.id">
+              {{ product.name }}
             </li>
           </ul>
         </div>
-        <button class="btn btn-primary btn-large" @click="onClick(yes)">NO</button>
+        <button class="button is-primary is-center" @click="onClick('yes')">NO</button>
       </div>
     </div>
     <div class="column">
@@ -109,7 +110,7 @@
         tax: 6
       }
     },
-    props: ['tests'],
+    props: ['products'],
     methods: {
       onClick: (click) => {
         console.log(click)

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" style="margin-top: 25px">
     <div class="columns">
         <div class="column is-2">
           <aside class="menu">
@@ -20,7 +20,7 @@
           </aside>
         </div>
         <div class="column">
-          <pos-cashier tests="{{ $products }}"></pos-cashier>
+          <pos-cashier :products="{{ $products }}"></pos-cashier>
         </div>
     </div>
 </div>

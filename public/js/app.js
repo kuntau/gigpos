@@ -2031,6 +2031,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Cashierr mounted!');
@@ -2042,7 +2043,7 @@ __webpack_require__.r(__webpack_exports__);
       tax: 6
     };
   },
-  props: ['tests'],
+  props: ['products'],
   methods: {
     onClick: function onClick(click) {
       console.log(click);
@@ -52015,30 +52016,24 @@ var render = function() {
         _c("div", { staticClass: "card-content" }, [
           _c("p", { staticClass: "is-uppercase" }, [
             _vm._v(
-              "\n          I'm an example " +
-                _vm._s(_vm.tests.count) +
-                ".\n        "
+              "\n          I'm an example @" +
+                _vm._s(_vm.products.length) +
+                " + " +
+                _vm._s(typeof _vm.products) +
+                "\n        "
             )
           ]),
           _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n          I'm an example " + _vm._s(_vm.name) + ".\n        "
-            )
-          ]),
+          false
+            ? undefined
+            : _vm._e(),
           _vm._v(" "),
           _c(
             "ul",
-            { staticClass: "listx" },
-            _vm._l(_vm.tests, function(t, i) {
-              return _c("li", [
-                _vm._v(
-                  "\n            " +
-                    _vm._s(t.name) +
-                    " - " +
-                    _vm._s(i) +
-                    "\n          "
-                )
+            { staticClass: "list" },
+            _vm._l(_vm.products, function(product) {
+              return _c("li", { key: product.id }, [
+                _vm._v("\n            " + _vm._s(product.name) + "\n          ")
               ])
             }),
             0
@@ -52048,10 +52043,10 @@ var render = function() {
         _c(
           "button",
           {
-            staticClass: "btn btn-primary btn-large",
+            staticClass: "button is-primary is-center",
             on: {
               click: function($event) {
-                return _vm.onClick(_vm.yes)
+                return _vm.onClick("yes")
               }
             }
           },
