@@ -37,7 +37,7 @@ class POSController extends Controller
     public function cashier(Request $request)
     {
       // $products = Product::all();
-      $products = Product::where('price','<','10')->get();
+      $products = Product::where('price','<','100')->get();
       // $first = Product::all();
       // $first = $first->toArray();
       // dd($first);
