@@ -52299,10 +52299,9 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "field-body" }, [
               _c("div", { staticClass: "field" }, [
-                _c("input", {
-                  staticClass: "input is-small",
-                  attrs: { type: "number", placeholder: "6%" }
-                })
+                _c("p", { staticClass: "is-size-6 has-text-right" }, [
+                  _vm._v("$49.99")
+                ])
               ])
             ])
           ])

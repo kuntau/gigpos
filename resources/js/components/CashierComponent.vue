@@ -102,7 +102,7 @@
             <div class="field is-horizontal is-grouped">
               <div class="field-label"><label class="label" for="discount">SST</label></div>
               <div class="field-body">
-                <div class="field"><input class="input is-small" type="number" placeholder="6%"></div>
+                <div class="field"><p class="is-size-6 has-text-right">$49.99</p></div>
               </div>
             </div>
           </div>
