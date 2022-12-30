@@ -59,8 +59,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        Product::destroy($product->id);
-        return response()->success();
+        return Product::destroy($product->id);
+        // return response()->success();
         // return response("Product with id {$product->id}, destroyed successfully", 202);
     }
 }

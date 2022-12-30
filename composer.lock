@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccbd816a07b206f971042295b899d1ba",
+    "content-hash": "64e19bc8a07ed9cef248339708c9cbc7",
     "packages": [
         {
             "name": "brick/math",
@@ -1085,16 +1085,16 @@
         },
         {
             "name": "laravel/sanctum",
-            "version": "v3.0.1",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sanctum.git",
-                "reference": "b71e80a3a8e8029e2ec8c1aa814b999609ce16dc"
+                "reference": "d823587299d50c3ae9c26fa1731ef0d5b725c788"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sanctum/zipball/b71e80a3a8e8029e2ec8c1aa814b999609ce16dc",
-                "reference": "b71e80a3a8e8029e2ec8c1aa814b999609ce16dc",
+                "url": "https://api.github.com/repos/laravel/sanctum/zipball/d823587299d50c3ae9c26fa1731ef0d5b725c788",
+                "reference": "d823587299d50c3ae9c26fa1731ef0d5b725c788",
                 "shasum": ""
             },
             "require": {
@@ -1146,7 +1146,7 @@
                 "issues": "https://github.com/laravel/sanctum/issues",
                 "source": "https://github.com/laravel/sanctum"
             },
-            "time": "2022-07-29T21:33:30+00:00"
+            "time": "2023-01-03T09:38:46+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -5640,6 +5640,67 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
+            "name": "laravel/breeze",
+            "version": "v1.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/breeze.git",
+                "reference": "5d9ff31af5ddfe86ddf7bcd22df7b61818dcc2c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/5d9ff31af5ddfe86ddf7bcd22df7b61818dcc2c1",
+                "reference": "5d9ff31af5ddfe86ddf7bcd22df7b61818dcc2c1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^9.21",
+                "illuminate/filesystem": "^9.21",
+                "illuminate/support": "^9.21",
+                "illuminate/validation": "^9.21",
+                "php": "^8.0.2"
+            },
+            "conflict": {
+                "laravel/framework": "<9.37.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Breeze\\BreezeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Breeze\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Minimal Laravel authentication scaffolding with Blade and Tailwind.",
+            "keywords": [
+                "auth",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/breeze/issues",
+                "source": "https://github.com/laravel/breeze"
+            },
+            "time": "2023-01-03T14:13:49+00:00"
+        },
+        {
             "name": "laravel/pint",
             "version": "v1.2.1",
             "source": {
@@ -7835,5 +7896,5 @@
         "php": "^8.0.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
